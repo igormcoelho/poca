@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @competition.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @competition.location %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @competition.website %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @competition.year %>
+</p>
+
+<p>
+  <strong>Remote server:</strong>
+  <%= @competition.remote_server %>
+</p>
+
+<p>
+  <strong>Remote user:</strong>
+  <%= @competition.remote_user %>
+</p>
+
+<p>
+  <strong>Begin time:</strong>
+  <%= @competition.begin_time %>
+</p>
+
+<p>
+  <strong>Blind time:</strong>
+  <%= @competition.blind_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @competition.end_time %>
+</p>
+
+<%= link_to 'Edit', edit_competition_path(@competition) %> |
+<%= link_to 'Back', competitions_path %>

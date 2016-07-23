@@ -1,0 +1,53 @@
+<%= form_for(@competition) do |f| %>
+  <% if @competition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@competition.errors.count, "error") %> prohibited this competition from being saved:</h2>
+
+      <ul>
+      <% @competition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :remote_server %><br>
+    <%= f.text_field :remote_server %>
+  </div>
+  <div class="field">
+    <%= f.label :remote_user %><br>
+    <%= f.text_field :remote_user %>
+  </div>
+  <div class="field">
+    <%= f.label :begin_time %><br>
+    <%= f.datetime_select :begin_time %>
+  </div>
+  <div class="field">
+    <%= f.label :blind_time %><br>
+    <%= f.datetime_select :blind_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
