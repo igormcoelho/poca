@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root to: "competitions#index"
+  
+  devise_for :users
   resources :languages
   resources :problems
   resources :competitions
